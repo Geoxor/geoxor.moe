@@ -47,18 +47,16 @@ const activeRoute = computed(() => route.params.category);
 const covers = Object.values(import.meta.globEager("../assets/covers/*.json")) as ICover[];
 const songs = Object.values(import.meta.globEager("../assets/songs/*.json")) as ISong[];
 
+function songToString(song: ISong): string {
+  return [song.title, song.type, song.artists.join(" "), song.is_remix ? "remix" : undefined].join(" ").toLowerCase();
+}
+
 const songResults = computed(() => {
   if (coverSearch.value) {
     const lowercase = coverSearch.value.toLowerCase();
 
     return songs.filter((song) => {
-      if (
-        ("remix".includes(lowercase) && song.is_remix) ||
-        song.title.toLowerCase().includes(lowercase) ||
-        song.type.toLowerCase().includes(lowercase) ||
-        song.artists.join(" ").toLowerCase().includes(lowercase)
-      )
-        return song;
+      if (songToString(song).includes(lowercase)) return song;
     });
   }
   return songs;
