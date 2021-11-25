@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+  "strict": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "target": "ES2017",
+  "moduleResolution": "node",
+  "outDir": "dist",
+  "declaration": false,
+  "module": "commonjs",
+  "rootDirs": ["./src"],
+  "baseUrl": "./",
+  }
+}
