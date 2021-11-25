@@ -1,14 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from "~/components/Header.vue";
+</script>
 
 <template>
-  <router-view />
+  <div class="flex flex-col">
+    <Header />
+    <router-view />
+  </div>
 </template>
 
 <style lang="postcss">
 body,
 html,
 #app {
-  @apply h-full w-full bg-theme-100;
+  @apply h-full text-theme-700 w-full bg-theme-100;
 }
 
 :root {
@@ -22,5 +27,9 @@ html,
   --theme-700: #6d6e72;
   --theme-800: #a0a0a0;
   --theme-900: #b9b9b9;
+}
+
+* {
+  @apply !outline-none  fill-current;
 }
 </style>
