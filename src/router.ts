@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/downloads",
+    path: "/downloads/:category",
     name: "downloads",
     component: () => import("~/views/Downloads.vue"),
     meta: {

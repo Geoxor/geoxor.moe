@@ -15,7 +15,7 @@
         <router-link :to="{ name: 'minecraft' }">Minecraft</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'downloads' }">Downloads</router-link>
+        <router-link :to="{ name: 'downloads', params: { category: 'music' } }">Downloads</router-link>
       </li>
     </ul>
   </header>
