@@ -12,23 +12,8 @@
       </DownloadCategory>
     </div>
 
-    <div class="covers grid gap-2 grid-cols-2 md:grid-cols-5">
-      <Cover
-        link="https://cdn.discordapp.com/attachments/755597803102928966/913312347261653032/artworks-GVEYc8cVrbdBgyx8-dbUR2Q-t500x500.png"
-        name="Heal Her"
-      />
-      <Cover
-        link="https://cdn.discordapp.com/attachments/755597803102928966/913312347261653032/artworks-GVEYc8cVrbdBgyx8-dbUR2Q-t500x500.png"
-        name="Heal Her"
-      />
-      <Cover
-        link="https://cdn.discordapp.com/attachments/755597803102928966/913312347261653032/artworks-GVEYc8cVrbdBgyx8-dbUR2Q-t500x500.png"
-        name="Heal Her"
-      />
-      <Cover
-        link="https://cdn.discordapp.com/attachments/755597803102928966/913312347261653032/artworks-GVEYc8cVrbdBgyx8-dbUR2Q-t500x500.png"
-        name="Heal Her"
-      />
+    <div v-if="activeRoute == 'covers'" class="covers grid gap-2 grid-cols-2 md:grid-cols-5">
+      <Cover v-for="cover of covers" :cover="cover" />
     </div>
   </div>
 </template>
@@ -36,6 +21,14 @@
 <script setup lang="ts">
 import DownloadCategory from "~/components/DownloadCategory.vue";
 import Cover from "~/components/Cover.vue";
+import { Cover as ICover } from "~/interfaces";
+import { useRoute } from "vue-router";
+import { computed } from "vue";
+
+const route = useRoute();
+const activeRoute = computed(() => route.params.category);
+
+const covers = import.meta.globEager("../assets/covers/*.json") as Record<string, ICover>;
 </script>
 
 <style lang="postcss"></style>

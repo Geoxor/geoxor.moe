@@ -13,11 +13,11 @@ import Header from "~/components/Header.vue";
 body,
 html,
 #app {
-  @apply h-full text-theme-700 w-full bg-theme-100;
+  @apply h-full w-full;
 }
 
 :root {
-  --accent-color: #d1b1ff;
+  --accent-color: #9448ff;
   --theme-100: #0c0d0f;
   --theme-200: #111215;
   --theme-300: #17191e;

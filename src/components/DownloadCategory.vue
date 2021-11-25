@@ -5,9 +5,9 @@
       category
       w-full
       border-2
-      text-theme-600
+      text-theme-500
       border-transparent
-      hover:border-theme-700 hover:text-theme-700
+      hover:border-accent hover:text-accent
       flex
       py-4
       px-6
@@ -34,6 +34,6 @@ defineProps<{
 
 <style scoped lang="postcss">
 .category.router-link-active {
-  @apply bg-white text-black border-transparent;
+  @apply bg-black text-white border-transparent;
 }
 </style>

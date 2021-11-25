@@ -31,10 +31,10 @@ header {
 }
 
 a.router-link-active {
-  @apply text-white;
+  @apply text-accent;
 }
 
 ul > li {
-  @apply hover:text-theme-900;
+  @apply hover:text-black;
 }
 </style>
