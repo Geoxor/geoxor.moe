@@ -20,7 +20,7 @@
         placeholder="Search for a song..."
       />
       <div class="flex flex-col" v-for="song in sortSongs(songResults)">
-        <Song :song="song" :cover="covers.find((cover) => cover.name === song.title)" />
+        <Song :song="song" :cover="covers.find((cover) => cover.name === song.cover)" />
         <div class="w-full h-1px mt-2 bg-theme-[#dddddd]"></div>
       </div>
     </div>

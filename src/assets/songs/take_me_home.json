@@ -1,9 +1,9 @@
 {
-  "artists": [
-    "Geoxor"
-  ],
+  "artists": ["Geoxor"],
   "title": "Take Me Home",
+  "cover": "Stardust",
+  "date": "Dec 1, 2019",
   "is_remix": false,
   "type": "Single",
-  "link": "/public/songs/Geoxor - Take Me Home.mp3"
+  "link": "/songs/Geoxor - Take Me Home.mp3"
 }

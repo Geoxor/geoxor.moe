@@ -4,31 +4,29 @@ import fs from "fs";
 import { ICommonTagsResult } from "music-metadata/lib/type";
 
 const SONG_PATH = "./public/songs";
+const COVER_PATH = "./public/covers";
 
-async function writeJson(filename: string, data: ICommonTagsResult) {
-  const jsonPath =
+async function writeMusicJson(data: ICommonTagsResult, filename: string) {
+  const destinationPath =
     filename
       .substring(filename.lastIndexOf(" - ") + 3, filename.lastIndexOf("."))
       .replace(/\s/g, "_")
       .toLowerCase() + ".json";
 
-  fs.writeFileSync(
-    `./src/assets/songs/${jsonPath}`,
-    JSON.stringify(
-      {
-        artists: data.artists,
-        title: data.title,
-        is_remix: data.title?.toLowerCase().includes("remix") ? true : false,
-        type: "Single",
-        date: data.date,
-        link: `/public/songs/${filename}`,
-      },
-      null,
-      2
-    )
-  );
+  writeJson(`./src/assets/songs/${destinationPath}`, {
+    artists: data.artists,
+    title: data.title,
+    cover: data.album,
+    is_remix: data.title?.toLowerCase().includes("remix") ? true : false,
+    type: "Single",
+    date: data.date,
+    link: `/songs/${filename}`,
+  });
+  return console.log(`Generated JSON ${destinationPath} for ${filename}`);
+}
 
-  console.log(`Generated JSON ${jsonPath} for ${filename}`);
+async function writeJson(dest: string, data: object) {
+  fs.writeFileSync(dest, JSON.stringify(data, null, 2));
 }
 
 async function main() {
@@ -39,7 +37,7 @@ async function main() {
   for (let song of songs) {
     const buffer = fs.readFileSync(`${SONG_PATH}/${song}`);
     const metadata = await mm.parseBuffer(buffer);
-    writeJson(song, metadata.common);
+    writeMusicJson(metadata.common, song);
   }
 
   process.exit(0);

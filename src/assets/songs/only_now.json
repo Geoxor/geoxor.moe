@@ -1,9 +1,9 @@
 {
-  "artists": [
-    "Geoxor"
-  ],
+  "artists": ["Geoxor"],
   "title": "Only Now",
+  "cover": "Stardust",
+  "date": "Dec 1, 2019",
   "is_remix": false,
   "type": "Single",
-  "link": "/public/songs/Geoxor - Only Now.mp3"
+  "link": "/songs/Geoxor - Only Now.mp3"
 }

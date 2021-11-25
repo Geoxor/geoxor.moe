@@ -9,6 +9,7 @@ export type ReleaseType = "ep" | "album" | "single";
 export interface Song {
   [key: string]: any;
   date: string;
+  cover: string;
   is_remix: boolean;
   title: string;
   type: ReleaseType;
