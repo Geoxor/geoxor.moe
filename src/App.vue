@@ -30,6 +30,7 @@ html,
 }
 
 * {
-  @apply !outline-none  fill-current;
+  @apply !outline-none fill-current;
+  font-family: "Shippori Antique", sans-serif;
 }
 </style>

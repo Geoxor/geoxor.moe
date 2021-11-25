@@ -5,7 +5,6 @@ import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
-import ViteFonts from "vite-plugin-fonts";
 import path from "path";
 
 // https://vitejs.dev/config/
@@ -24,11 +23,6 @@ export default defineConfig({
       ],
     }),
     WindiCSS(),
-    ViteFonts({
-      google: {
-        families: ["Roboto"],
-      },
-    }),
     Icons({
       customCollections: {
         fluency: FileSystemIconLoader("./public/icons/svg"),
