@@ -19,7 +19,7 @@
         type="text"
         placeholder="Search for a song..."
       />
-      <div v-for="song in songResults">
+      <div v-for="song in sortSongs(songResults)">
         <Song :song="song" :cover="covers.find((cover) => cover.name === song.title)" />
         <div class="w-full h-1px mt-2 bg-theme-[#dddddd]"></div>
       </div>
@@ -47,9 +47,11 @@ const activeRoute = computed(() => route.params.category);
 const covers = Object.values(import.meta.globEager("../assets/covers/*.json")) as ICover[];
 const songs = Object.values(import.meta.globEager("../assets/songs/*.json")) as ISong[];
 
-function songToString(song: ISong): string {
-  return [song.title, song.type, song.artists.join(" "), song.is_remix ? "remix" : undefined].join(" ").toLowerCase();
-}
+const songToString = (song: ISong): string =>
+  [song.title, song.type, song.artists.join(" "), song.is_remix ? "remix" : undefined].join(" ").toLowerCase();
+
+const sortSongs = (songs: ISong[]): ISong[] =>
+  songs.sort((a, b) => (new Date(a.date).getTime() > new Date(b.date).getTime() ? -1 : 1));
 
 const songResults = computed(() => {
   if (coverSearch.value) {
