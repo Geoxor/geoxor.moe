@@ -21,7 +21,7 @@
       />
       <div v-for="song in songResults">
         <Song :song="song" :cover="covers.find((cover) => cover.name === song.title)" />
-        <div class="w-full h-1px mt-2 bg-theme-[#ddd]"></div>
+        <div class="w-full h-1px mt-2 bg-theme-[#dddddd]"></div>
       </div>
     </div>
 
