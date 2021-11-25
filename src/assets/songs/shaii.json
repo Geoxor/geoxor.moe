@@ -1,8 +1,9 @@
 {
-  "artists": ["Geoxor"],
+  "artists": [
+    "Geoxor"
+  ],
   "title": "Shaii",
   "is_remix": false,
   "type": "Single",
-  "date": "Apr 15, 2019",
-  "link": "https://cdn.discordapp.com/attachments/691139128267505664/799966127265677322/Geoxor_-_Shaii.mp3"
+  "link": "/public/songs/Geoxor - Shaii.mp3"
 }

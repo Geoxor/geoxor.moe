@@ -1,8 +1,9 @@
 {
-  "artists": ["Geoxor"],
+  "artists": [
+    "Geoxor"
+  ],
   "title": "Faerie",
   "is_remix": false,
   "type": "Single",
-  "date": "Nov 13, 2020",
-  "link": "https://cdn.discordapp.com/attachments/553776591910600714/776830165706604624/Geoxor_-_Faerie.mp3"
+  "link": "/public/songs/Geoxor - Faerie.mp3"
 }
