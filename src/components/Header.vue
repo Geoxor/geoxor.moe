@@ -1,5 +1,5 @@
 <template>
-  <header class="flex xl:px-10/100 md:px-5/100 px-4/100 py-4 items-center justify-between">
+  <header class="flex padding py-4 items-center justify-between">
     <img class="h-4" src="../assets/geoxor_logo.svg" />
     <ul class="flex w-full justify-end text-theme-700 gap-4 items-center uppercase text-sm">
       <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
@@ -16,7 +16,7 @@
         <router-link :to="{ name: 'minecraft' }">Minecraft</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'downloads', params: { category: 'music' } }">Downloads</router-link>
+        <router-link :to="{ name: 'downloads' }">Downloads</router-link>
       </li>
     </ul>
   </header>

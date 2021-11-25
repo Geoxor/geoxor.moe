@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col h-full gap-2 xl:px-10/100 md:px-5/100 px-4/100 items-center justify-start">
-    <div class="flex md:flex-row flex-col gap-4 w-full">
+  <div class="flex flex-col h-full gap-2 padding items-center justify-start">
+    <div class="flex md:flex-row flex-col gap-2 w-full">
       <DownloadCategory category="music" desc="Download 320kbps mp3s of my music">
         <i-fluency-bass-clef />
       </DownloadCategory>
-      <DownloadCategory category="covers" desc="High quality covers from my muisic">
+      <DownloadCategory category="covers" desc="High quality covers from my music">
         <i-fluency-cover />
       </DownloadCategory>
       <DownloadCategory category="assets" desc="Miscellaneous assets such as logos etc">

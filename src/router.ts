@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteLocationNormalizedLoaded, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/downloads/:category",
+    path: "/downloads/:category?",
     name: "downloads",
     component: () => import("~/views/Downloads.vue"),
     meta: {
@@ -30,6 +30,12 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  // Redirect if the user somehow entered /downloads with no category selected /downloads/:music
+  if (to.name === "downloads" && !to.params.category) return next({ name: to.name, params: { category: "music" } });
+  return next();
 });
 
 export default router;

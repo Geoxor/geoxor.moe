@@ -46,4 +46,9 @@ html,
   @apply !outline-none fill-current;
   font-family: "Shippori Antique", sans-serif;
 }
+
+/* Style aliases */
+.padding {
+  @apply xl:px-10/100 md:px-5/100 px-4/100;
+}
 </style>
