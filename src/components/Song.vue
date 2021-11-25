@@ -1,5 +1,5 @@
 <template>
-  <div class="song rounded-4px overflow-hidden flex flex-col w-full">
+  <div class="hover:bg-[#eee] rounded-4px overflow-hidden flex flex-col w-full">
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-4">
         <div class="w-24">
@@ -25,18 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
 import { Song, Cover as ICover } from "~/interfaces";
 import Cover from "./Cover.vue";
-
-const props = defineProps<{
+defineProps<{
   song: Song;
   cover?: ICover;
 }>();
 </script>
-
-<style lang="postcss" scoped>
-.song:hover {
-  @apply bg-[#eee];
-}
-</style>

@@ -15,7 +15,7 @@
     <div v-if="activeRoute == 'music'" class="flex flex-col gap-2 w-full">
       <div v-for="song in songs">
         <Song :song="song" :cover="covers.find((cover) => cover.name === song.title)" />
-        <div class="w-full h-1px bg-theme-[#eee]"></div>
+        <div class="w-full h-1px mt-2 bg-theme-[#ddd]"></div>
       </div>
     </div>
 
