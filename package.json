@@ -14,6 +14,7 @@
     "unplugin-icons": "^0.12.18",
     "unplugin-vue-components": "^0.17.1",
     "vite": "^2.6.4",
+    "vite-plugin-md": "^0.11.4",
     "vite-plugin-tauri": "^0.1.6",
     "vite-plugin-windicss": "^1.5.1",
     "vue": "^3.2.16",
