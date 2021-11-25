@@ -15,6 +15,19 @@ html,
 #app {
   @apply h-full w-full;
 }
+*::-webkit-scrollbar {
+  width: 6px;
+  left: -100px;
+}
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-theme-900;
+  border-radius: 20px;
+  border: transparent;
+}
 
 :root {
   --accent-color: #9448ff;
