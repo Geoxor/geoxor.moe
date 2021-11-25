@@ -51,4 +51,8 @@ html,
 .padding {
   @apply xl:px-10/100 md:px-5/100 px-4/100;
 }
+.scrollable {
+  overflow-y: overlay;
+  overflow-x: initial;
+}
 </style>
