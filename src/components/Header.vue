@@ -1,6 +1,7 @@
 <template>
-  <header>
-    <ul class="flex w-full justify-end text-theme-700 p-4 gap-4 items-center uppercase text-sm">
+  <header class="flex xl:px-10/100 md:px-5/100 px-4/100 py-4 items-center justify-between">
+    <img class="h-4" src="../assets/geoxor_logo.svg" />
+    <ul class="flex w-full justify-end text-theme-700 gap-4 items-center uppercase text-sm">
       <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
       <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
       <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />

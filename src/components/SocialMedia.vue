@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="hidden md:flex">
     <a class="flex items-center" target="_blank" :href="link">
       <i-fluency-instagram v-if="link.includes('instagram')" />
       <i-fluency-youtube v-if="link.includes('youtube')" />
