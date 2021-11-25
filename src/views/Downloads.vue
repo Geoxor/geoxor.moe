@@ -13,7 +13,13 @@
     </div>
 
     <div v-if="activeRoute == 'music'" class="flex flex-col gap-2 w-full">
-      <div v-for="song in songs">
+      <input
+        class="rounded-4px p-2 border-2 border-transparent bg-light-600 focus:border-accent"
+        v-model="coverSearch"
+        type="text"
+        placeholder="Search for a song..."
+      />
+      <div v-for="song in songResults">
         <Song :song="song" :cover="covers.find((cover) => cover.name === song.title)" />
         <div class="w-full h-1px mt-2 bg-theme-[#ddd]"></div>
       </div>
@@ -32,12 +38,28 @@ import Song from "~/components/Song.vue";
 import { Cover as ICover } from "~/interfaces";
 import { Song as ISong } from "~/interfaces";
 import { useRoute } from "vue-router";
-import { computed } from "vue";
+import { computed, ref } from "vue";
+
+const coverSearch = ref("");
 
 const route = useRoute();
 const activeRoute = computed(() => route.params.category);
 const covers = Object.values(import.meta.globEager("../assets/covers/*.json")) as ICover[];
 const songs = Object.values(import.meta.globEager("../assets/songs/*.json")) as ISong[];
+
+const songResults = computed(() => {
+  if (coverSearch.value) {
+    return songs.filter((song) => {
+      if (
+        song.title.toLowerCase().includes(coverSearch.value) ||
+        song.type.toLowerCase().includes(coverSearch.value) ||
+        song.artists.join(" ").toLowerCase().includes(coverSearch.value)
+      )
+        return song;
+    });
+  }
+  return songs;
+});
 </script>
 
 <style lang="postcss"></style>
