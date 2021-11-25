@@ -3,6 +3,7 @@
     :to="{ name: 'downloads', params: { category } }"
     class="
       category
+      w-full
       border-2
       text-theme-600
       border-transparent
