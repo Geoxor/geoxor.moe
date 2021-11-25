@@ -51,6 +51,7 @@ const songResults = computed(() => {
   if (coverSearch.value) {
     return songs.filter((song) => {
       if (
+        ("remix".includes(coverSearch.value) && song.is_remix) ||
         song.title.toLowerCase().includes(coverSearch.value) ||
         song.type.toLowerCase().includes(coverSearch.value) ||
         song.artists.join(" ").toLowerCase().includes(coverSearch.value)
