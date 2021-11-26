@@ -2,6 +2,10 @@ import { defineConfig } from "vite-plugin-windicss";
 import typography from "windicss/plugin/typography";
 import colors from "windicss/colors";
 
+/**
+ * Creates bullshit css variables that support transparency
+ * @author Bluskript
+ */
 function cssVarRgbHelper(cssVariable: string) {
   return ({ opacityVariable, opacityValue }: { opacityVariable: string; opacityValue: number }) => {
     if (opacityValue !== undefined) {
