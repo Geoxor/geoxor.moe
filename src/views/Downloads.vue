@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col h-full gap-2 padding items-center justify-start">
     <div class="flex md:flex-row flex-col gap-2 w-full">
-      <DownloadCategory category="music" desc="Download 320kbps mp3s of my music">
+      <DownloadCategory category="songs" desc="Download 320kbps mp3s of my songs">
         <i-fluency-bass-clef />
       </DownloadCategory>
-      <DownloadCategory category="covers" desc="High quality covers from my music">
+      <DownloadCategory category="covers" desc="High quality covers from my songs">
         <i-fluency-cover />
       </DownloadCategory>
       <DownloadCategory category="assets" desc="Miscellaneous assets such as logos etc">
@@ -12,7 +12,7 @@
       </DownloadCategory>
     </div>
 
-    <div v-if="activeRoute == 'music'" class="flex flex-col gap-2 w-full">
+    <div v-if="activeRoute == 'songs'" class="flex flex-col gap-2 w-full">
       <input
         class="rounded-4px p-2 border-2 border-transparent bg-light-600 focus:border-accent"
         v-model="coverSearch"
