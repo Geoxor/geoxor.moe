@@ -1,6 +1,6 @@
 <template>
   <header class="padding py-4 flex flex-col">
-    <noscript class="bg-red-600 text-sm py-1 px-2 w-full rounded-4px mb-2"
+    <noscript class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2"
       >This site works better with Javascript enabled</noscript
     >
     <div class="flex items-center justify-between">
