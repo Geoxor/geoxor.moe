@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-full gap-2 padding items-center justify-start">
-    <div class="flex md:flex-row flex-col gap-2 w-full">
+    <div class="flex flex-row gap-2 w-full">
       <DownloadCategory category="songs" desc="Download 320kbps mp3s of my songs">
         <i-fluency-bass-clef />
       </DownloadCategory>

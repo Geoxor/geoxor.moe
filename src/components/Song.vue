@@ -2,45 +2,21 @@
   <div class="hover:bg-theme-300 rounded-4px overflow-hidden flex flex-col w-full">
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <div class="w-24">
+        <div class="w-24 min-w-24">
           <Cover :cover="cover" />
         </div>
-        <div class="flex flex-col w-96">
+        <div class="flex flex-col w-auto md:w-64">
           <h1 class="text-lg">{{ song.is_remix ? song.title + " (Geoxor Remix)" : song.title }}</h1>
           <p class="text-theme-700">{{ song.artists.join(" & ") }}</p>
         </div>
-        <p class="text-theme-700 w-32">{{ song.date }}</p>
+        <p class="hidden md:flex text-theme-700 w-32">{{ song.date }}</p>
         <label
-          class="
-            rounded-full
-            border-2
-            select-none
-            bg-opacity-0
-            hover:bg-opacity-10
-            bg-accent
-            border-accent
-            text-accent
-            h-min
-            px-2
-            py-0.5
-          "
+          class="hidden md:hidden lg:flex rounded-full border-2 select-none bg-opacity-0 hover:bg-opacity-10 bg-accent border-accent text-accent h-min px-2 py-0.5"
           >{{ song.type }}</label
         >
         <label
           v-if="song.is_remix"
-          class="
-            rounded-full
-            border-2
-            select-none
-            bg-opacity-0
-            hover:bg-opacity-10
-            bg-[#0ff]
-            border-[#0ff]
-            text-[#0ff]
-            h-min
-            px-2
-            py-0.5
-          "
+          class="hidden md:hidden lg:flex rounded-full border-2 select-none bg-opacity-0 hover:bg-opacity-10 bg-[#0ff] border-[#0ff] text-[#0ff] h-min px-2 py-0.5"
           >Remix</label
         >
       </div>

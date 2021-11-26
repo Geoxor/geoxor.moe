@@ -4,24 +4,26 @@
       >This site works better with Javascript enabled</noscript
     >
     <div class="flex items-center justify-between">
-      <img class="logo h-4" src="../assets/geoxor_logo.svg" />
-      <ul class="flex w-full justify-end text-contrast gap-4 items-center uppercase text-sm">
-        <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
-        <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
-        <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
-        <SocialMedia title="tank" link="https://geoxor.newgrounds.com" />
-        <SocialMedia title="cloud" link="https://soundcloud.com/geoxor" />
-        <SocialMedia title="discord" link="https://discord.gg/geoxor" />
-        <SocialMedia title="github" link="https://github.com/Geoxor" />
-        <li>
-          <a target="_blank" href="https://store.geoxor.moe">Merch</a>
-        </li>
-        <li>
-          <router-link :to="{ name: 'minecraft' }">Minecraft</router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'downloads' }">Downloads</router-link>
-        </li>
+      <img class="hidden md:flex logo h-4" src="../assets/geoxor_logo.svg" />
+      <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
+        <div class="flex gap-4 items-center md:justify-between">
+          <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
+          <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
+          <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
+          <SocialMedia title="tank" link="https://geoxor.newgrounds.com" />
+          <SocialMedia title="cloud" link="https://soundcloud.com/geoxor" />
+          <SocialMedia title="discord" link="https://discord.gg/geoxor" />
+          <SocialMedia title="github" link="https://github.com/Geoxor" />
+          <li>
+            <a target="_blank" href="https://store.geoxor.moe">Merch</a>
+          </li>
+          <li>
+            <router-link :to="{ name: 'minecraft' }">Minecraft</router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'downloads' }">Downloads</router-link>
+          </li>
+        </div>
         <button
           class="flex items-center text-contrast"
           @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')"
