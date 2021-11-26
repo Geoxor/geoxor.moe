@@ -1,5 +1,5 @@
 <template>
-  <div class="hover:bg-theme-400 rounded-4px overflow-hidden flex flex-col w-full">
+  <div class="hover:bg-theme-300 rounded-4px overflow-hidden flex flex-col w-full">
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-4">
         <div class="w-24">
