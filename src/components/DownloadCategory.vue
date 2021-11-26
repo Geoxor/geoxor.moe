@@ -1,9 +1,9 @@
 <template>
   <router-link
     :to="{ name: 'downloads', params: { category } }"
-    class="category w-full border-2 text-contrast border-transparent hover:border-accent hover:text-accent flex flex-row py-4 px-6 gap-4 rounded-4px"
+    class="category w-full border-2 text-contrast border-transparent hover:border-accent hover:text-accent text-center sm:flex-row flex-col flex py-4 px-6 sm:gap-4 gap-1 rounded-4px"
   >
-    <div class="h-full flex items-center text-xl md:text-4xl">
+    <div class="h-full flex sm:justify-start justify-center items-center text-xl md:text-4xl">
       <slot />
     </div>
     <div class="flex gap-1 flex-col">
