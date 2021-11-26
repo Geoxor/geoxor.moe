@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouteLocationNormalizedLoaded, RouteRecordRaw } from "vue-router";
+import { RouteRecordRaw } from "vue-router";
 
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
@@ -26,16 +26,3 @@ const routes: RouteRecordRaw[] = [
     },
   },
 ];
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});
-
-router.beforeEach((to, from, next) => {
-  // Redirect if the user somehow entered /downloads with no category selected /downloads/:song
-  if (to.name === "downloads" && !to.params.category) return next({ name: to.name, params: { category: "songs" } });
-  return next();
-});
-
-export default router;

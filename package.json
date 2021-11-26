@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "generate": "set TS_NODE_COMPILER_OPTIONS={\"module\":\"commonjs\"} && ts-node ./src/songGenerator.ts && set TS_NODE_COMPILER_OPTIONS=",
-    "build": "vite build",
+    "build": "vite-ssg build",
     "publish": "git add dist && git commit -m \"auto deploy\" && git subtree push --prefix dist origin gh-pages",
     "serve": "vite preview",
     "prettify": "npx prettier --write \"./**/*.ts\" && npx prettier --write \"./**/*.json\" && npx prettier --write \"./**/*.vue\""
@@ -21,6 +21,7 @@
     "vite-plugin-pwa": "^0.11.7",
     "vite-plugin-tauri": "^0.1.6",
     "vite-plugin-windicss": "^1.5.1",
+    "vite-ssg": "^0.16.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.11",
     "vue-tsc": "^0.3.0",
