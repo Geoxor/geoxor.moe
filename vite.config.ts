@@ -34,35 +34,35 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    // VitePWA({
-    //   registerType: "autoUpdate",
-    //   includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
-    //   manifest: {
-    //     name: "Geoxor.moe",
-    //     short_name: "Geoxor",
-    //     start_url: "./",
-    //     display: "standalone",
-    //     description: "Geoxor",
-    //     theme_color: "#9448ff",
-    //     icons: [
-    //       {
-    //         src: "icons/pwa-192x192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "icons/pwa-512x512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "icons/pwa-512x512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //         purpose: "any maskable",
-    //       },
-    //     ],
-    //   },
-    // }),
+    VitePWA({
+      registerType: "autoUpdate",
+      includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
+      manifest: {
+        name: "Geoxor.moe",
+        short_name: "Geoxor",
+        start_url: "./",
+        display: "standalone",
+        description: "Geoxor",
+        theme_color: "#9448ff",
+        icons: [
+          {
+            src: "icons/pwa-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "icons/pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "icons/pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
+      },
+    }),
   ],
 });
