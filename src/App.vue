@@ -13,7 +13,7 @@ import Header from "~/components/Header.vue";
 body,
 html,
 #app {
-  @apply h-full w-full;
+  @apply h-full w-full bg-theme-100;
 }
 *::-webkit-scrollbar {
   width: 6px;
@@ -27,19 +27,6 @@ html,
   @apply bg-theme-900;
   border-radius: 20px;
   border: transparent;
-}
-
-:root {
-  --accent-color: 148, 72, 255;
-  --theme-100: 12, 13, 15;
-  --theme-200: 17, 18, 21;
-  --theme-300: 23, 25, 30;
-  --theme-400: 29, 32, 38;
-  --theme-500: 42, 45, 52;
-  --theme-600: 62, 65, 71;
-  --theme-700: 109, 110, 114;
-  --theme-800: 160, 160, 160;
-  --theme-900: 185, 185, 185;
 }
 
 * {

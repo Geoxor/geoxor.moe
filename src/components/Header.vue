@@ -18,12 +18,18 @@
       <li>
         <router-link :to="{ name: 'downloads' }">Downloads</router-link>
       </li>
+      <button @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">your mom is theme-100</button>
     </ul>
   </header>
 </template>
 
 <script setup lang="ts">
 import SocialMedia from "~/components/SocialMedia.vue";
+import { switchTheme } from "~/logic";
+import { useLocalStorage } from "@vueuse/core";
+import { watch } from "@vue/runtime-core";
+const themeState = useLocalStorage("theme", "dark");
+watch(themeState, () => switchTheme(themeState.value));
 </script>
 
 <style scoped lang="postcss">

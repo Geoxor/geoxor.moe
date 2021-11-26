@@ -21,7 +21,8 @@ export default defineConfig({
     extend: {
       colors: {
         ...colors,
-        accent: cssVarRgbHelper("accent-color"),
+        accent: cssVarRgbHelper("accent"),
+        aqua: cssVarRgbHelper("aqua"),
         theme: {
           100: cssVarRgbHelper("theme-100"),
           200: cssVarRgbHelper("theme-200"),
