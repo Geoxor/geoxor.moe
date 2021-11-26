@@ -1,10 +1,8 @@
 import * as mm from "music-metadata/lib/core";
-import util from "util";
 import fs from "fs";
 import { ICommonTagsResult } from "music-metadata/lib/type";
 
-const SONG_PATH = "./public/songs";
-const COVER_PATH = "./public/covers";
+const SONG_PATH = "./temp";
 
 async function writeMusicJson(data: ICommonTagsResult, date: string, filename: string) {
   const destinationPath =
