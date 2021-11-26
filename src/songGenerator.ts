@@ -6,7 +6,7 @@ import { ICommonTagsResult } from "music-metadata/lib/type";
 const SONG_PATH = "./public/songs";
 const COVER_PATH = "./public/covers";
 
-async function writeMusicJson(data: ICommonTagsResult, filename: string) {
+async function writeMusicJson(data: ICommonTagsResult, date: string, filename: string) {
   const destinationPath =
     filename
       .substring(filename.lastIndexOf(" - ") + 3, filename.lastIndexOf("."))
@@ -19,7 +19,7 @@ async function writeMusicJson(data: ICommonTagsResult, filename: string) {
     cover: data.album,
     is_remix: data.title?.toLowerCase().includes("remix") ? true : false,
     type: "Single",
-    date: data.date,
+    date,
     link: `/songs/${filename}`,
   });
   return console.log(`Generated JSON ${destinationPath} for ${filename}`);
@@ -37,7 +37,7 @@ async function main() {
   for (let song of songs) {
     const buffer = fs.readFileSync(`${SONG_PATH}/${song}`);
     const metadata = await mm.parseBuffer(buffer);
-    writeMusicJson(metadata.common, song);
+    writeMusicJson(metadata.common, metadata.native["ID3v2.3"].find((meta) => meta.id === "TYER")?.value, song);
   }
 
   process.exit(0);

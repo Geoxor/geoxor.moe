@@ -1,9 +1,11 @@
 {
-  "artists": ["Geoxor"],
+  "artists": [
+    "Geoxor"
+  ],
   "title": "Faerie",
   "cover": "Faerie",
-  "date": "Nov 13, 2020",
   "is_remix": false,
   "type": "Single",
+  "date": "Nov 13, 2020",
   "link": "/songs/Geoxor - Faerie.mp3"
 }

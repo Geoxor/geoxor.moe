@@ -1,9 +1,11 @@
 {
-  "artists": ["Geoxor"],
+  "artists": [
+    "Geoxor"
+  ],
   "title": "Neon Eyes",
   "cover": "Neon Eyes",
   "is_remix": false,
-  "type": "EP",
-  "date": "Nov 28, 2019",
-  "link": "https://cdn.discordapp.com/attachments/553776591910600714/909640099837411348/Geoxor_-_Neon_Eyes_EP.zip"
+  "type": "Single",
+  "date": "Dec 7, 2019",
+  "link": "/songs/Geoxor - Neon Eyes.mp3"
 }

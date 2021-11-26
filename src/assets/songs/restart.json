@@ -1,9 +1,11 @@
 {
-  "artists": ["Geoxor"],
+  "artists": [
+    "Geoxor"
+  ],
   "title": "Restart",
   "cover": "Stardust",
-  "date": "Dec 1, 2019",
   "is_remix": false,
   "type": "Single",
+  "date": "Dec 1, 2019",
   "link": "/songs/Geoxor - Restart.mp3"
 }
