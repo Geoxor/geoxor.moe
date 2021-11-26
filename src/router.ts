@@ -4,7 +4,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
-    component: () => import("~/views/Homepage.vue"),
+    component: () => import("./views/Homepage.vue"),
     meta: {
       title: "Geoxor | Home",
     },
@@ -12,7 +12,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: "/downloads/:category?",
     name: "downloads",
-    component: () => import("~/views/Downloads.vue"),
+    component: () => import("./views/Downloads.vue"),
     meta: {
       title: "Geoxor | Downloads",
     },
@@ -20,7 +20,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: "/minecraft",
     name: "minecraft",
-    component: () => import("~/views/Minecraft.vue"),
+    component: () => import("./views/Minecraft.vue"),
     meta: {
       title: "Geoxor | Minecraft Server",
     },

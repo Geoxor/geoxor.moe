@@ -11,12 +11,6 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    fs: {
-      // Allow serving files from one level up to the project root
-      allow: [".."],
-    },
-  },
   resolve: {
     alias: {
       "~/": `${path.resolve(__dirname, "src")}/`,
