@@ -1,0 +1,1 @@
+import{_ as e,a as s}from"./index.c8b95db3.js";import{o,c as t,a as c}from"./vendor.f3d322ac.js";const r={},a={class:"flex h-full justify-center items-center"},n=c("img",{class:"w-128",src:s,alt:"Geoxor Logo"},null,-1),_=[n];function i(d,l){return o(),t("div",a,_)}var p=e(r,[["render",i]]);export{p as default};
