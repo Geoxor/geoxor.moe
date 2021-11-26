@@ -10,8 +10,37 @@
           <p class="text-theme-700">{{ song.artists.join(" & ") }}</p>
         </div>
         <p class="text-theme-700 w-32">{{ song.date }}</p>
-        <label class="rounded-full border-2 select-none border-accent text-accent h-min px-2 py-0.5">{{ song.type }}</label>
-        <label v-if="song.is_remix" class="rounded-full border-2 select-none border-[#0ff] text-[#0ff] h-min px-2 py-0.5"
+        <label
+          class="
+            rounded-full
+            border-2
+            select-none
+            bg-opacity-0
+            hover:bg-opacity-10
+            bg-accent
+            border-accent
+            text-accent
+            h-min
+            px-2
+            py-0.5
+          "
+          >{{ song.type }}</label
+        >
+        <label
+          v-if="song.is_remix"
+          class="
+            rounded-full
+            border-2
+            select-none
+            bg-opacity-0
+            hover:bg-opacity-10
+            bg-[#0ff]
+            border-[#0ff]
+            text-[#0ff]
+            h-min
+            px-2
+            py-0.5
+          "
           >Remix</label
         >
       </div>

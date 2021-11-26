@@ -8,12 +8,8 @@ import colors from "windicss/colors";
  */
 function cssVarRgbHelper(cssVariable: string) {
   return ({ opacityVariable, opacityValue }: { opacityVariable: string; opacityValue: number }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(--${cssVariable}), ${opacityValue})`;
-    }
-    if (opacityVariable !== undefined) {
-      return `rgba(var(--${cssVariable}), var(${opacityVariable}, 1))`;
-    }
+    if (opacityValue) return `rgba(var(--${cssVariable}), ${opacityValue})`;
+    if (opacityVariable) return `rgba(var(--${cssVariable}), var(${opacityVariable}, 1))`;
     return `rgb(var(--${cssVariable}))`;
   };
 }
