@@ -13,7 +13,7 @@ async function writeMusicJson(data: ICommonTagsResult, date: string, filename: s
       .replace(/\s/g, "_")
       .toLowerCase() + ".json";
 
-  writeJson(`./src/assets/songs/${destinationPath}`, {
+  return writeJson(`./src/assets/songs/${destinationPath}`, {
     artists: data.artists,
     title: data.title,
     cover: data.album,
@@ -22,23 +22,28 @@ async function writeMusicJson(data: ICommonTagsResult, date: string, filename: s
     date,
     link: `/songs/${filename}`,
   });
-  return console.log(`Generated JSON ${destinationPath} for ${filename}`);
 }
 
 async function writeJson(dest: string, data: object) {
-  fs.writeFileSync(dest, JSON.stringify(data, null, 2));
+  return fs.promises.writeFile(dest, JSON.stringify(data, null, 2));
 }
 
 async function main() {
   console.log("Generating release templates\n");
 
-  const songs = fs.readdirSync(SONG_PATH);
-
-  for (let song of songs) {
-    const buffer = fs.readFileSync(`${SONG_PATH}/${song}`);
-    const metadata = await mm.parseBuffer(buffer);
-    writeMusicJson(metadata.common, metadata.native["ID3v2.3"].find((meta) => meta.id === "TYER")?.value, song);
-  }
+  await Promise.all(
+    fs.readdirSync(SONG_PATH).map(async (song) => {
+      const buffer = fs.readFileSync(`${SONG_PATH}/${song}`);
+      const metadata = await mm.parseBuffer(buffer);
+      const promise = writeMusicJson(
+        metadata.common,
+        metadata.native["ID3v2.3"].find((meta) => meta.id === "TYER")?.value,
+        song
+      );
+      console.log(`Generated JSON for ${song}`);
+      return promise;
+    })
+  );
 
   process.exit(0);
 }
