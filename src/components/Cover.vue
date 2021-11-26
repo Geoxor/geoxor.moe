@@ -1,6 +1,6 @@
 <template>
   <div class="cursor-pointer box-content cover overflow-hidden rounded-4px relative w-full h-full">
-    <div class="flex gap-2 bg-white text-black">
+    <div class="flex gap-2 bg-white text-text">
       <a v-if="cover" target="_blank " :href="cover.original">
         <img class="w-full h-full" :src="preview" :alt="cover.name" />
       </a>

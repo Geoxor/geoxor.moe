@@ -13,7 +13,7 @@ import Header from "~/components/Header.vue";
 body,
 html,
 #app {
-  @apply h-full w-full bg-theme-100;
+  @apply h-full w-full bg-theme-100 text-contrast;
 }
 *::-webkit-scrollbar {
   width: 6px;
@@ -24,7 +24,7 @@ html,
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-theme-900;
+  @apply bg-contrast;
   border-radius: 20px;
   border: transparent;
 }

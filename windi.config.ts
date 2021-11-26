@@ -23,6 +23,8 @@ export default defineConfig({
         ...colors,
         accent: cssVarRgbHelper("accent"),
         aqua: cssVarRgbHelper("aqua"),
+        contrast: cssVarRgbHelper("contrast"),
+        text: cssVarRgbHelper("text"),
         theme: {
           100: cssVarRgbHelper("theme-100"),
           200: cssVarRgbHelper("theme-200"),

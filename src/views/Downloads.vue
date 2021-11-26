@@ -14,14 +14,14 @@
 
     <div v-if="activeRoute == 'songs'" class="flex flex-col gap-2 w-full">
       <input
-        class="rounded-4px p-2 border-2 border-transparent bg-light-600 focus:border-accent"
+        class="rounded-4px p-2 border-2 border-transparent bg-theme-300 focus:border-accent"
         v-model="coverSearch"
         type="text"
         placeholder="Search for a song..."
       />
       <div class="flex flex-col" v-for="song in sortSongs(songResults)">
         <Song :song="song" :cover="covers.find((cover) => cover.name === song.cover)" />
-        <div class="w-full h-1px mt-2 bg-theme-[#dddddd]"></div>
+        <div class="w-full h-1px mt-2 bg-theme-500"></div>
       </div>
     </div>
 

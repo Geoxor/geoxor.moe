@@ -1,7 +1,7 @@
 <template>
   <header class="flex padding py-4 items-center justify-between">
     <img class="h-4" src="../assets/geoxor_logo.svg" />
-    <ul class="flex w-full justify-end text-theme-700 gap-4 items-center uppercase text-sm">
+    <ul class="flex w-full justify-end text-theme-800 gap-4 items-center uppercase text-sm">
       <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
       <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
       <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
@@ -18,7 +18,12 @@
       <li>
         <router-link :to="{ name: 'downloads' }">Downloads</router-link>
       </li>
-      <button @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">your mom is theme-100</button>
+      <button
+        class="flex items-center text-theme-800"
+        @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')"
+      >
+        <i-fluency-moon />
+      </button>
     </ul>
   </header>
 </template>
@@ -42,6 +47,6 @@ a.router-link-active {
 }
 
 ul > li {
-  @apply hover:text-black;
+  @apply hover:;
 }
 </style>
