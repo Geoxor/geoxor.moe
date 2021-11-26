@@ -20,7 +20,7 @@ async function writeMusicJson(data: ICommonTagsResult, date: string, filename: s
     is_remix: data.title?.toLowerCase().includes("remix") ? true : false,
     type: "Single",
     date,
-    link: `/songs/${filename}`,
+    // link: `/songs/${filename}`,
   });
 }
 

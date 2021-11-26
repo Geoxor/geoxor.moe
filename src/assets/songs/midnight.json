@@ -1,11 +1,9 @@
 {
-  "artists": [
-    "Geoxor"
-  ],
+  "artists": ["Geoxor"],
   "title": "Midnight",
   "cover": "Neon Eyes",
   "is_remix": false,
   "type": "Single",
   "date": "Dec 7, 2019",
-  "link": "/songs/Geoxor - Midnight.mp3"
+  "link": "https://cdn.discordapp.com/attachments/911762334979084368/913668025658515476/Geoxor_-_Midnight.mp3"
 }

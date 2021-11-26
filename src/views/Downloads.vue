@@ -48,7 +48,7 @@ const covers = Object.values(import.meta.globEager("../assets/covers/*.json")) a
 const songs = Object.values(import.meta.globEager("../assets/songs/*.json")) as ISong[];
 
 const songToString = (song: ISong): string =>
-  [song.title, song.type, song.artists.join(" "), song.is_remix ? "remix" : undefined].join(" ").toLowerCase();
+  [song.title, song.type, song.cover, song.artists.join(" "), song.is_remix ? "remix" : undefined].join(" ").toLowerCase();
 
 const sortSongs = (songs: ISong[]): ISong[] =>
   songs.sort((a, b) => (new Date(a.date).getTime() > new Date(b.date).getTime() ? -1 : 1));

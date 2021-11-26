@@ -1,11 +1,9 @@
 {
-  "artists": [
-    "Geoxor"
-  ],
+  "artists": ["Geoxor"],
   "title": "Move",
   "cover": "Irreversible EP",
   "is_remix": false,
   "type": "Single",
   "date": "Feb 9, 2017",
-  "link": "/songs/Geoxor - Move.mp3"
+  "link": "https://cdn.discordapp.com/attachments/911762334979084368/913668022814777444/Geoxor_-_Move.mp3"
 }
