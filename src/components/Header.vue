@@ -1,6 +1,6 @@
 <template>
   <header class="flex padding py-4 items-center justify-between">
-    <img class="h-4" src="../assets/geoxor_logo.svg" />
+    <img class="logo h-4" src="../assets/geoxor_logo.svg" />
     <ul class="flex w-full justify-end text-theme-800 gap-4 items-center uppercase text-sm">
       <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
       <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
