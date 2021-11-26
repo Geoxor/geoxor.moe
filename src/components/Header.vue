@@ -5,7 +5,7 @@
     >
     <div class="flex items-center justify-between">
       <img class="logo h-4" src="../assets/geoxor_logo.svg" />
-      <ul class="flex w-full justify-end text-theme-800 gap-4 items-center uppercase text-sm">
+      <ul class="flex w-full justify-end text-contrast gap-4 items-center uppercase text-sm">
         <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
         <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
         <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
@@ -23,7 +23,7 @@
           <router-link :to="{ name: 'downloads' }">Downloads</router-link>
         </li>
         <button
-          class="flex items-center text-theme-800"
+          class="flex items-center text-contrast"
           @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')"
         >
           <i-fluency-moon />
