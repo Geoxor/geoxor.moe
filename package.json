@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "generate": "set TS_NODE_COMPILER_OPTIONS={\"module\":\"commonjs\"} && ts-node ./src/songGenerator.ts && set TS_NODE_COMPILER_OPTIONS=",
+    "generate_linux": "TS_NODE_COMPILER_OPTIONS={\"module\":\"commonjs\"} && ts-node ./src/songGenerator.ts && TS_NODE_COMPILER_OPTIONS=",
     "build": "npm run generate && vue-tsc --noEmit && vite build",
+    "build_linux": "npm run generate_linux && vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "prettify": "npx prettier --write \"./**/*.ts\" && npx prettier --write \"./**/*.json\" && npx prettier --write \"./**/*.vue\""
   },
