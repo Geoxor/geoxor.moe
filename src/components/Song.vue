@@ -25,7 +25,7 @@
           target="_blank"
           :href="song.link"
           class="rounded-full flex items-center gap-2 border-2 border-accent select-none bg-accent h-min text-white px-4 py-2"
-          ><i-fluency-save /> Download</a
+          ><i-fluency-save /><span class="hidden sm:block">Download</span></a
         >
       </div>
     </div>
