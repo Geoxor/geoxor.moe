@@ -17,12 +17,4 @@ export const routes: RouteRecordRaw[] = [
       title: "Geoxor | Downloads",
     },
   },
-  {
-    path: "/minecraft",
-    name: "minecraft",
-    component: () => import("./views/Minecraft.vue"),
-    meta: {
-      title: "Geoxor | Minecraft Server",
-    },
-  },
 ];

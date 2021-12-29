@@ -1,8 +1,8 @@
 <template>
   <header class="padding py-4 flex flex-col">
-    <noscript class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2"
-      >This site works better with Javascript enabled</noscript
-    >
+    <noscript
+      class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2"
+    >This site works better with Javascript enabled</noscript>
     <div class="flex items-center justify-between">
       <img class="hidden md:flex logo h-4" src="../assets/geoxor_logo.svg" />
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
@@ -16,9 +16,6 @@
           <SocialMedia title="github" link="https://github.com/Geoxor" />
           <li>
             <a target="_blank" href="https://store.geoxor.moe">Merch</a>
-          </li>
-          <li>
-            <router-link :to="{ name: 'minecraft' }">Minecraft</router-link>
           </li>
           <li>
             <router-link :to="{ name: 'downloads' }">Downloads</router-link>
