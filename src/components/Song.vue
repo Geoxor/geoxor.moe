@@ -11,22 +11,20 @@
         </div>
         <p class="hidden md:flex text-theme-700 w-32">{{ song.date }}</p>
         <label
-          class="hidden md:hidden lg:flex rounded-full border-2 select-none bg-opacity-0 hover:bg-opacity-10 bg-accent border-accent text-accent h-min px-2 py-0.5"
-          >{{ song.type }}</label
-        >
-        <label
-          v-if="song.is_remix"
-          class="hidden md:hidden lg:flex rounded-full border-2 select-none bg-opacity-0 hover:bg-opacity-10 bg-[#0ff] border-[#0ff] text-[#0ff] h-min px-2 py-0.5"
-          >Remix</label
-        >
+          class="bg-accent border-accent text-accent"
+          :class="song.type.toLowerCase()"
+        >{{ song.type }}</label>
+        <label v-if="song.is_remix" class="remix">Remix</label>
       </div>
       <div class="flex items-center gap-4 px-4">
         <a
           target="_blank"
           :href="song.link"
           class="rounded-full flex items-center gap-2 border-2 border-accent select-none bg-accent h-min text-white px-4 py-2"
-          ><i-fluency-save /><span class="hidden sm:block">Download</span></a
         >
+          <i-fluency-save />
+          <span class="hidden sm:block">Download</span>
+        </a>
       </div>
     </div>
   </div>
@@ -40,3 +38,21 @@ defineProps<{
   cover?: ICover;
 }>();
 </script>
+
+<style lang="postcss" scoped>
+label {
+  @apply hidden md:hidden lg:flex rounded-full border-2 select-none h-min px-2 py-0.5;
+  &.single {
+    @apply bg-opacity-0 hover:bg-opacity-10 bg-primary-400 border-primary-400 text-primary-400;
+  }
+  &.album {
+    @apply bg-opacity-0 hover:bg-opacity-10 bg-[#0faf7f] border-[#0faf7f] text-[#0faf7f];
+  }
+  &.remix {
+    @apply bg-opacity-0 hover:bg-opacity-10 bg-[#0ff] border-[#0ff] text-[#0ff];
+  }
+  &.ep {
+    @apply bg-opacity-0 hover:bg-opacity-10 bg-[#f93] border-[#f93] text-[#f93];
+  }
+}
+</style>

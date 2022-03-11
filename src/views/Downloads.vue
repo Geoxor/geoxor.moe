@@ -64,5 +64,3 @@ const songResults = computed(() => {
   return songs;
 });
 </script>
-
-<style lang="postcss"></style>
