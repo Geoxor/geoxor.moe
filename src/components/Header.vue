@@ -1,16 +1,15 @@
 <template>
-  <header class="padding py-4 flex flex-col">
-    <noscript
-      class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2"
-    >This site works better with Javascript enabled</noscript>
+  <header class="padding py-4 flex  w-full flex-col" :class="$route.name === 'home' && 'absolute'">
+    <noscript class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2">This site works better with
+      Javascript enabled</noscript>
     <div class="flex items-center justify-between">
-      <img class="hidden md:flex logo h-4" src="../assets/geoxor_logo.svg" />
+      <img class="hidden md:flex logo h-4 cursor-pointer" src="../assets/geoxor_logo.svg"
+        @click="$router.push({ name: 'home' })" />
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
         <div class="flex gap-4 items-center md:justify-between">
           <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
           <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
           <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
-          <SocialMedia title="tank" link="https://geoxor.newgrounds.com" />
           <SocialMedia title="cloud" link="https://soundcloud.com/geoxor" />
           <SocialMedia title="discord" link="https://discord.gg/geoxor" />
           <SocialMedia title="github" link="https://github.com/Geoxor" />
@@ -21,10 +20,8 @@
             <router-link :to="{ name: 'downloads' }">Downloads</router-link>
           </li>
         </div>
-        <button
-          class="flex items-center text-contrast"
-          @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')"
-        >
+        <button class="flex items-center text-contrast"
+          @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">
           <i-fluency-moon />
         </button>
       </ul>
@@ -50,7 +47,7 @@ a.router-link-active {
   @apply text-accent;
 }
 
-ul > li {
-  @apply hover:;
+ul>li {
+  @apply hover: ;
 }
 </style>
