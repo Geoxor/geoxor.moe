@@ -29,7 +29,7 @@
 <style scoped lang="postcss">
 .blurry {
   aspect-ratio: 1/1;
-  background-image: url('./lowres.png');
+  background-image: url('/lowres.png');
   background-color: white;
   background-size: 200%;
   background-position-x: -100px;
