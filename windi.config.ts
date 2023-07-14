@@ -24,7 +24,8 @@ export default defineConfig({
         accent: cssVarRgbHelper("accent"),
         aqua: cssVarRgbHelper("aqua"),
         contrast: cssVarRgbHelper("contrast"),
-        text: cssVarRgbHelper("text"),
+        category: cssVarRgbHelper("category-text"),
+        title: cssVarRgbHelper("title-text"),
         theme: {
           100: cssVarRgbHelper("theme-100"),
           200: cssVarRgbHelper("theme-200"),

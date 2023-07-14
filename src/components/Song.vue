@@ -6,7 +6,7 @@
           <Cover :cover="cover" />
         </div>
         <div class="flex flex-col w-auto md:w-64">
-          <h1 class="text-lg">{{ song.is_remix ? song.title + " (Geoxor Remix)" : song.title }}</h1>
+          <h1 class="text-lg text-title">{{ song.is_remix ? song.title + " (Geoxor Remix)" : song.title }}</h1>
           <p class="text-theme-700">{{ song.artists.join(" & ") }}</p>
         </div>
         <p class="hidden md:flex text-theme-700 w-32">{{ song.date }}</p>
