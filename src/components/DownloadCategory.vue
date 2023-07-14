@@ -22,6 +22,6 @@ defineProps<{
 
 <style scoped lang="postcss">
 .category.router-link-active {
-  @apply bg-contrast text-text border-transparent;
+  @apply bg-contrast text-category border-transparent;
 }
 </style>
