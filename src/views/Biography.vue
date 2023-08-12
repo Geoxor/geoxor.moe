@@ -8,7 +8,7 @@
         <br>
         Born on the 27th of March 2001, Geoxor begun his first journey into music in 2005 when his sister brought home a
         box
-        of CDs one of which contained FL Studio. he then forgot about it up until the age of 10, when he re-discovered the
+        of CDs one of which contained FL Studio. he then forgot about it up until the age of 10 when he re-discovered the
         same
         software again and installed it on his computer.
         <br>
