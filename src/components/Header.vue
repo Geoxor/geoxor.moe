@@ -1,5 +1,5 @@
 <template>
-  <header class="padding py-4 flex  w-full flex-col" :class="$route.name === 'home' && 'absolute'">
+  <header class="padding py-4 flex w-full flex-col" :class="$route.name === 'home' && 'absolute'">
     <noscript class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2">This site works better with
       Javascript enabled</noscript>
     <div class="flex items-center justify-between">
@@ -9,10 +9,13 @@
         <div class="flex gap-4 items-center md:justify-between">
           <SocialMedia title="instagram" link="https://instagram.com/geoxor" />
           <SocialMedia title="youtube" link="https://www.youtube.com/geoxor" />
-          <SocialMedia title="twitter" link="https://twitter.com/Geoxor" />
+          <SocialMedia title="bandcamp" link="https://geoxor.bandcamp.com/" />
+          <SocialMedia title="github" link="https://github.com/Geoxor" />
           <SocialMedia title="cloud" link="https://soundcloud.com/geoxor" />
           <SocialMedia title="discord" link="https://discord.gg/geoxor" />
-          <SocialMedia title="github" link="https://github.com/Geoxor" />
+          <li>
+            <router-link :to="{ name: 'biography' }">Biography</router-link>
+          </li>
           <li>
             <a target="_blank" href="https://store.geoxor.moe">Merch</a>
           </li>

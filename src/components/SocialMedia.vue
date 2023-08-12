@@ -8,6 +8,7 @@
       <i-fluency-cloud v-if="link.includes('soundcloud')" />
       <i-fluency-discord v-if="link.includes('discord')" />
       <i-fluency-github v-if="link.includes('github')" />
+      <i-fluency-bandcamp v-if="link.includes('bandcamp')" />
     </a>
   </li>
 </template>

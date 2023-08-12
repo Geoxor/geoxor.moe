@@ -10,6 +10,14 @@ export const routes: RouteRecordRaw[] = [
     },
   },
   {
+    path: "/biography",
+    name: "biography",
+    component: () => import("./views/Biography.vue"),
+    meta: {
+      title: "Geoxor | Biography",
+    },
+  },
+  {
     path: "/downloads/:category?",
     name: "downloads",
     component: () => import("./views/Downloads.vue"),
