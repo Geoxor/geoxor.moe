@@ -52,7 +52,7 @@ label {
     @apply bg-opacity-0 hover:bg-opacity-10 bg-[#0ff] border-[#0ff] text-[#0ff];
   }
   &.ep {
-    @apply bg-opacity-0 hover:bg-opacity-10 bg-[#f93] border-[#f93] text-[#f93];
+    @apply bg-opacity-0 hover:bg-opacity-10 bg-[#e6e6fa] border-[#e6e6fa] text-[#e6e6fa];
   }
 }
 </style>
