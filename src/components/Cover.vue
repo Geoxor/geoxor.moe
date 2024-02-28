@@ -17,10 +17,6 @@ const props = defineProps<{
 }>();
 
 const preview = computed(() => {
-  if (props.cover?.original.includes("discordapp")) {
-    return props.cover?.original.replace("cdn.discordapp.com", "media.discordapp.net") + "?width=325&height=325";
-  }
-
   if (props.cover?.preview) return props.cover?.preview;
   else return props.cover?.original;
 });
