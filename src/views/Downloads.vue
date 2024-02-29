@@ -1,15 +1,13 @@
 <template>
   <div class="flex flex-col h-full gap-2 padding items-center justify-start">
     <div class="flex flex-row gap-2 w-full">
-      <DownloadCategory category="songs" desc="Download 320kbps mp3s of my songs">
+      <DownloadCategory category="songs" desc="Official audio files">
         <i-fluency-bass-clef />
       </DownloadCategory>
-      <DownloadCategory category="covers" desc="High quality covers from my songs">
+      <DownloadCategory category="covers" desc="Official high quality artwork">
         <i-fluency-cover />
       </DownloadCategory>
-      <DownloadCategory category="assets" desc="Miscellaneous assets such as logos etc">
-        <i-fluency-assets />
-      </DownloadCategory>
+
     </div>
 
     <div v-if="activeRoute == 'songs'" class="flex flex-col gap-2 w-full">
