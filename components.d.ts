@@ -7,7 +7,6 @@ declare module 'vue' {
     Cover: typeof import('./src/components/Cover.vue')['default']
     DownloadCategory: typeof import('./src/components/DownloadCategory.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
-    IFluencyAssets: typeof import('~icons/fluency/assets')['default']
     IFluencyBandcamp: typeof import('~icons/fluency/bandcamp')['default']
     IFluencyBassClef: typeof import('~icons/fluency/bass-clef')['default']
     IFluencyCloud: typeof import('~icons/fluency/cloud')['default']
