@@ -3,7 +3,7 @@
     <section>
       <h1>Biography</h1>
       <p>
-        George Tsotsos is an independant electronic music artist going by the name "Geoxor" from Florina, Greece.
+        George Tsotsos is an independent electronic music artist going by the name "Geoxor" from Florina, Greece.
         <br>
         <br>
         Born on the 27th of March 2001, Geoxor begun his first journey into music in 2005 when his sister brought home a
