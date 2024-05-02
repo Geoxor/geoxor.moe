@@ -12,7 +12,7 @@
 
     <div v-if="activeRoute == 'songs'" class="flex flex-col gap-2 w-full">
       <input
-        class="rounded-4px p-2 border-2 border-transparent bg-theme-300 focus:border-accent"
+        class="rounded-4px p-2 border-2 border-transparent bg-theme-300 focus:border-accent text-title"
         v-model="coverSearch"
         type="text"
         placeholder="Search for a song..."
