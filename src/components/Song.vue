@@ -2,7 +2,7 @@
   <div class="hover:bg-theme-300 rounded-4px overflow-hidden flex flex-col w-full">
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <div class="w-24 min-w-24">
+        <div class="w-24 min-w-24 h-24 min-h-24">
           <Cover :cover="cover" />
         </div>
         <div class="flex flex-col w-auto md:w-64">
