@@ -1,0 +1,7 @@
+services:
+    geoxor.moe:
+        ports:
+            - 8084:80
+        container_name: geoxor.moe
+        restart: unless-stopped
+        image: geoxor.moe
