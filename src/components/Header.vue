@@ -17,9 +17,6 @@
             <router-link :to="{ name: 'biography' }">Biography</router-link>
           </li>
           <li>
-            <a target="_blank" href="https://store.geoxor.moe">Merch</a>
-          </li>
-          <li>
             <router-link :to="{ name: 'downloads' }">Downloads</router-link>
           </li>
         </div>
